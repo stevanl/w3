@@ -11,8 +11,7 @@
       %ul.nav.navbar-nav
         %li{class: "#{active == "home" ? 'active' : ''}"}
           %a{href: "#{root_path}"} Home
-      %ul.nav.navbar-nav.navbar-right
         %li{class: "#{active == "about" ? 'active' : ''}"}
           %a{href: "#{about_path}"} About
-        %li
-          %a{href: "#contact"} Contact
+      .nav.navbar-right
+        = link_to 'Add Company', new_company_path, class: "btn btn-default navbar-btn"
