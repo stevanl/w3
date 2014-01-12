@@ -11,7 +11,7 @@
     %dt Blog feed url:
     %dd= @company.blog_feed_url
     %dt Twitter username:
-    %dd= @company.twitter_username
+    %dd= link_to_twitter(@company.twitter_username)
     %dt Category code:
     %dd= @company.category_code
     %dt Number of employees:

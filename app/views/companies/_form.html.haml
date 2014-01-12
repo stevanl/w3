@@ -31,7 +31,9 @@
   .form-group
     %label.col-sm-2.control-label= f.label :twitter_username
     .col-sm-10
-      = f.text_field :twitter_username, class: "form-control", placeholder: "@username"
+      .input-group
+        %span{class: "input-group-addon"} @
+        = f.text_field :twitter_username, class: "form-control", placeholder: "@username"
   .form-group
     %label.col-sm-2.control-label= f.label :category_code
     .col-sm-10
