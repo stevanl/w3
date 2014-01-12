@@ -1,0 +1,72 @@
+= form_for @company, html: {class: "form-horizontal", role: "form"} do |f|
+  - if @company.errors.any?
+    / - raise @company.errors.messages.inspect
+    #error_explanation.panel.panel-danger
+      .panel-heading= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
+      .panel-body
+        %ul
+          - @company.errors.full_messages.each do |msg|
+            %li= msg
+
+  .form-group
+    %label.col-sm-2.control-label= f.label :name
+    .col-sm-10
+      = f.text_field :name, class: "form-control", placeholder: "Company Name"
+  .form-group
+    %label.col-sm-2.control-label= f.label :permalink
+    .col-sm-10
+      = f.text_field :permalink, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :homepage_url
+    .col-sm-10
+      = f.text_field :homepage_url, class: "form-control", placeholder: "Homepage URL"
+  .form-group
+    %label.col-sm-2.control-label= f.label :blog_url
+    .col-sm-10
+      = f.text_field :blog_url, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :blog_feed_url
+    .col-sm-10
+      = f.text_field :blog_feed_url, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :twitter_username
+    .col-sm-10
+      = f.text_field :twitter_username, class: "form-control", placeholder: "@username"
+  .form-group
+    %label.col-sm-2.control-label= f.label :category_code
+    .col-sm-10
+      = f.text_field :category_code, class: "form-control", placeholder: "offshore"
+  .form-group
+    %label.col-sm-2.control-label= f.label :number_of_employees
+    .col-sm-10
+      = f.text_field :number_of_employees, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :founded_year
+    .col-sm-10
+      = f.text_field :founded_year, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :founded_month
+    .col-sm-10
+      = f.text_field :founded_month, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :founded_day
+    .col-sm-10
+      = f.text_field :founded_day, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :email_address
+    .col-sm-10
+      = f.text_field :email_address, class: "form-control", placeholder: "info@company.com"
+  .form-group
+    %label.col-sm-2.control-label= f.label :phone_number
+    .col-sm-10
+      = f.text_field :phone_number, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :description
+    .col-sm-10
+      = f.text_area :description, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :overview
+    .col-sm-10
+      = f.text_area :overview, class: "form-control"
+  .actions
+    = f.submit 'Save', class: "btn btn-primary", "data-loading-text" => "Loading..."

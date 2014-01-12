@@ -1,0 +1,36 @@
+.container
+  %dl.dl-horizontal
+    %dt Name:
+    %dd= @company.name
+    %dt Permalink:
+    %dd= @company.permalink
+    %dt Homepage url:
+    %dd= @company.homepage_url
+    %dt Blog url:
+    %dd= @company.blog_url
+    %dt Blog feed url:
+    %dd= @company.blog_feed_url
+    %dt Twitter username:
+    %dd= @company.twitter_username
+    %dt Category code:
+    %dd= @company.category_code
+    %dt Number of employees:
+    %dd= @company.number_of_employees
+    %dt Founded year:
+    %dd= @company.founded_year
+    %dt Founded month:
+    %dd= @company.founded_month
+    %dt Founded day:
+    %dd= @company.founded_day
+    %dt Email address:
+    %dd= @company.email_address
+    %dt Phone number:
+    %dd= @company.phone_number
+    %dt Description:
+    %dd= @company.description
+    %dt Overview:
+    %dd= @company.overview
+
+    = link_to 'Edit', edit_company_path(@company)
+    \|
+    = link_to 'Back', companies_path

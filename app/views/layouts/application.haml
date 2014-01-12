@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title W3CTO
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .container
+      = render "shared/header", active: @active || "home"
+      = render "shared/notices"
+    = yield
+    = render "layouts/footer"
