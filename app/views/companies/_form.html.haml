@@ -1,6 +1,5 @@
 = form_for @company, html: {class: "form-horizontal", role: "form"} do |f|
   - if @company.errors.any?
-    / - raise @company.errors.messages.inspect
     #error_explanation.panel.panel-danger
       .panel-heading= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
       .panel-body
@@ -71,4 +70,4 @@
     .col-sm-10
       = f.text_area :overview, class: "form-control"
   .actions
-    = f.submit 'Save', class: "btn btn-primary", "data-loading-text" => "Loading..."
+    = f.submit 'Save', class: "btn btn-primary"
