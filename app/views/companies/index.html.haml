@@ -21,7 +21,9 @@
 
       - @companies.each do |company|
         %tr
-          %td= link_to company.name, company
+          %td.text-center
+            .logo= image_tag "http://placehold.it/150x50"
+            .name= link_to company.name, company
           %td= company.homepage_url
           %td= company.twitter_username
           %td= company.category_code
