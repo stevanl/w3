@@ -4,7 +4,11 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @search = Company.search(params[:q])
+    @search.sorts = 'updated_at desc' if @search.sorts.empty?
+    @companies_all = @search.result(:distinct => true)
+    @companies = @companies_all.page(params[:page]).per(20)
+    @search.build_condition
   end
 
   # GET /companies/1

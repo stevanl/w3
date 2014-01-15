@@ -1,6 +1,9 @@
 W3Cto::Application.routes.draw do
-  resources :companies
-
+  resources :companies do
+    collection do
+      match 'search' => 'companies#search', via: [:get, :post], as: :search
+    end
+  end
   root 'companies#index'
 
   get 'about' => 'main#about'
