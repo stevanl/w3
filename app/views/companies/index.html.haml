@@ -1,12 +1,4 @@
 .container
-
-  = search_form_for @search, url: search_companies_path, method: :get do |f|
-    %fieldset
-      %legend Search
-      .controls.controls-row
-        / = f.text_field :name_cont, class: 'span2', placeholder: 'Company name contains...'
-        = f.submit "Search", class: "btn btn-primary"
-
   %h1 Find a contractor
 
   .table-responsive

@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/ernie/ransack.git
+  remote: git://github.com/activerecord-hackery/ransack.git
   revision: 321040ba62b400cfcbf05c0f2122f518483a4d88
   branch: rails-4
   specs:

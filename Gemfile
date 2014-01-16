@@ -67,5 +67,5 @@ end
 gem 'compass-rails'
 gem 'exception_notification'
 
-gem "ransack", github: "ernie/ransack", branch: "rails-4"
+gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 
